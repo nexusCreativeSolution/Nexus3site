@@ -10,10 +10,10 @@ import menuItems from './header.data';
 export default function Header({ className }) {
   return (
       <header sx={styles.header} className={className} id="header">
-        <Container sx={styles.Container}>
+        <Container sx={styles.container}>
           <Logo src={LogoDark} />
           <Flex as="nav" sx={styles.nav}>
-            {menuItems.map((menuItems,i) => (
+            {menuItems.map((menuItems, i) => (
               <Link
                activeClass ="active"
                to={menuItems.path}
@@ -24,15 +24,17 @@ export default function Header({ className }) {
                key={i}
                >
                  {menuItems.label}
-      
-             
               </Link>
             ))}
 
           </Flex>
-          <Button className="donate_btn" variant="secondary" aria-label="Get Started" >
+          <Button className="donate__btn" variant="secondary" aria-label="Get started">
             Get started
+
           </Button>
+          
+             
+         
         </Container>
 
       </header>
