@@ -32,6 +32,8 @@ export default function Header({ className }) {
             Get started
 
           </Button>
+          <MobileDrawer />
+          
           
              
          
