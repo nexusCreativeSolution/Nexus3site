@@ -45,7 +45,10 @@ const data = [
 
 export default function KeyFeature() {
   return (
-   <h1>Key Feature</h1>
+   <section id="feature">
+     
+
+   </section>
   );
 }
 
