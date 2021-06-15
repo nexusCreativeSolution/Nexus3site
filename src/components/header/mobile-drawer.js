@@ -37,7 +37,8 @@ export default function MobileDrawer() {
      </Box>
    }
    open={isDrawerOpen}
-   toggleHandler={() => setIsDrawerOpen((prevState) => !prevState)}
+   toggleHandler={() => setIsDrawerOpen((prevState) => !prevState )}
+    
    
 
    >

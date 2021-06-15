@@ -21,7 +21,7 @@ export default function Drawer ({
       <RcDrawer
       open={open}
       onClose={toggleHandler}
-      className={`drawer${className || ''}`.trim()}
+      className={`drawer ${className || ''}` .trim()}
       width={width}
       placement={placement}
       handler={false}
@@ -37,7 +37,7 @@ export default function Drawer ({
           </Box>
         )}
         <Box sx={drawerStyle}>{children}</Box>
-      </RcDrawer>
+      </RcDrawer> 
       <Box className="drawer__handler" style={{display:'inline-block'} } onClick={toggleHandler}>
         {drawerHandler}
       </Box>
