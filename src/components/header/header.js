@@ -30,14 +30,10 @@ export default function Header({ className }) {
           </Flex>
           <Button className="donate__btn" variant="secondary" aria-label="Get started">
             Get started
-
           </Button>
           <MobileDrawer />
-          
-          
-             
-         
         </Container>
+        
 
       </header>
   );
