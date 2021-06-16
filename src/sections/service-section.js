@@ -4,7 +4,7 @@ import { jsx, Container, Box, Grid, Text, Heading, Button, Image } from 'theme-u
 import { keyframes } from '@emotion/core';
 import TextFeature from 'components/text-feature';
 import ModalVideo from 'react-modal-video';
-import { IoIosPlay } from 'react-icons/io';
+import { IoIosPlay, IoMdHeartEmpty } from 'react-icons/io';
 
 import ServiceThumb from 'assets/service-thumb.png';
 import shapePattern from 'assets/shape-pattern1.png';
@@ -64,6 +64,21 @@ export default function ServiceSection() {
         </Box>
         <Box sx={styles.contentBox}>
           <TextFeature subTitle={data.subTitle} title={data.title}/>
+          <Grid sx={styles.Grid}>
+            {data.features.map((feature) => (
+              <Box sx={styles.card} key={feature.id}>
+               <Image src={feature.imgSrc} alt={feature.altText} sx={styles.icon} />
+               <Box sx={styles.wrapper} >
+                 <Heading sx={styles.wrapper.title} >
+                   {feature.title}
+                   <Text sx={styles.wrapper.subTitle}>
+                     {feature.text}
+                   </Text>
+                 </Heading>
+               </Box>
+              </Box>
+            ))}
+          </Grid>
         </Box>
 
       </Container>
