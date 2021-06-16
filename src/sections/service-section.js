@@ -37,7 +37,14 @@ const data = {
 
 export default function ServiceSection() {
   return (
-    <h1>Service Section</h1>
+    <section sx={{variant : 'section.services'}}>
+      <Container sx={styles.containerBox}>
+        <Box sx={styles.thumbnail}>
+          <Image src={ServiceThumb} alt={"Thumbnail"}/>
+        </Box>
+
+      </Container>
+    </section>
   );
 }
 
