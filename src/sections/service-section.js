@@ -11,6 +11,7 @@ import shapePattern from 'assets/shape-pattern1.png';
 
 import Smart from 'assets/services/smart.svg';
 import Secure from 'assets/services/secure.svg';
+import MobileDrawer from 'components/header/mobile-drawer';
 
 const data = {
   subTitle: 'our services',
@@ -36,6 +37,7 @@ const data = {
 };
 
 export default function ServiceSection() {
+  const[videoOpen , setVideoOpen] = useState(false);
   const handleClick = (e) => {
     e.preventDefault();
 
@@ -82,6 +84,12 @@ export default function ServiceSection() {
         </Box>
 
       </Container>
+      <ModalVideo 
+      channel="youtube"
+      isOpen={videoOpen}
+      videoId="iGBERMGMIvcfQBmcs"
+      onClose={() => setVideoOpen(false)}
+      />
     </section>
   );
 }
