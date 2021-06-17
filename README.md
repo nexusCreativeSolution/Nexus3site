@@ -2,7 +2,18 @@
 Next js React landing page | Business Website
 
 
-<<<<<<< HEAD
+
+![screencapture-localhost-3000-2021-06-17-23_25_31](https://user-images.githubusercontent.com/64256212/122449329-98a6b300-cf5a-11eb-8a85-f0e319ab1df8.png)
+
+
+
+
+
+
+
+
+
+
 =======
 ## Getting Started
 
@@ -15,4 +26,4 @@ npm run dev
 yarn
 yarn dev
 ```
->>>>>>> e23e194027145125474dd0bc14692d5a85853c99
+
