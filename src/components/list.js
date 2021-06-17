@@ -23,7 +23,7 @@ export default function List({ items = [], parentStyle, childStyle }) {
               {item.icon}
              </IconButton>
               {item.text}
-           </Flex>
+          </Flex>
       ))}
    </Box> 
   );
