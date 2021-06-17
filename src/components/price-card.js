@@ -14,7 +14,22 @@ export default function PriceCard({
   },
 }) {
   return (
-    <h1>PriceCard</h1>
+    <Card
+       className={header ? 'package__card active' : 'package__card'}
+       sx={styles.pricingBox}
+       >
+       {header && <Text sx={styles.header}>{header}</Text>}
+       <Box>
+         <Box className="package__header" sx={styles.pricingHeader}>
+           <Heading className="package__name" variant="title">
+             {name}
+           </Heading>
+           <Text as="p" >{description}</Text>
+
+         </Box>
+         <List item={points} childStyle ={styles.listItem} />
+       </Box>
+       </Card>
   );
 }
 
