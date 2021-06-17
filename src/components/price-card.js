@@ -27,7 +27,7 @@ export default function PriceCard({
            <Text as="p" >{description}</Text>
 
          </Box>
-         <List item={points} childStyle ={styles.listItem} />
+         <List items={points} childStyle ={styles.listItem} />
        </Box>
        </Card>
   );
