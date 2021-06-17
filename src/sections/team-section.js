@@ -179,7 +179,30 @@ const data = [
 
 export default function TeamSection() {
   return (
-    <h1>Team Section</h1>
+    <section>
+      <Container>
+        <SectionHeader
+           slogan="our Team"
+           title= "The most qulified and talented induviduals"
+           />
+
+        <Grid sx={styles.grid}>
+        {data.map((item) => (
+          <TeamCard 
+            key={item.id}
+            src={item.imgSrc}
+            altText={item.altText}
+            title={item.title}
+            designation={item.designation}
+            social={item.socialProfile}
+          />
+        ))}  
+          
+        </Grid>   
+
+           
+      </Container>
+    </section>
   );
 }
 
