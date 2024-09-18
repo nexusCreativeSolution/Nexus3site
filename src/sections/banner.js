@@ -7,24 +7,21 @@ import ShapeRight from 'assets/shape-right.png';
 
 export default function Banner() {
   return (
-    <section sx={styles.banner} id="home" >
-      <Container  sx={styles.banner.container}>
+    <section sx={styles.banner} id="home">
+      <Container sx={styles.banner.container}>
         <Box sx={styles.banner.contentBox}>
           <Heading as="h1" variant="heroPrimary">
-            Top Quality Digital Products to Explore
+            Innovative Websites, Business Bots, and Custom Flyers
           </Heading>
           <Text as="p" variant="heroSecondary">
-            Check out our website to find great software products and details! Idf you need a website or web applicaton this is the place to go!
+            Elevate your business with our cutting-edge websites, powerful automation bots, and custom-designed flyers. We provide the tools you need to grow your brand and streamline your operations.
           </Text>
-          <Button variant="primary">Explore</Button>
+          <Button variant="primary">Explore Our Services</Button>
         </Box>
         <Box sx={styles.banner.imageBox}>
-          <Image src={BannerImg} alt='banner'/> 
-
-       
+          <Image src={BannerImg} alt="banner" />
         </Box>
       </Container>
-
     </section>
   );
 }
