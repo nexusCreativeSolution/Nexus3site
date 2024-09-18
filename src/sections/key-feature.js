@@ -1,75 +1,46 @@
-/** @jsx jsx */
 import { jsx } from 'theme-ui';
 import { Container, Grid } from 'theme-ui';
 import SectionHeader from '../components/section-header';
 import FeatureCardColumn from 'components/feature-card-column.js';
-import Performance from 'assets/key-feature/performance.svg';
-import Partnership from 'assets/key-feature/partnership.svg';
-import Subscription from 'assets/key-feature/subscription.svg';
+import WebsiteDesign from 'assets/key-feature/website-design.svg';
+import BusinessBots from 'assets/key-feature/business-bots.svg';
+import Flyers from 'assets/key-feature/flyers.svg';
 import Support from 'assets/key-feature/support.svg';
 
 const data = [
   {
     id: 1,
-    imgSrc: Performance,
-    altText: 'Fast Performance',
-    title: 'Fast Performance',
+    imgSrc: WebsiteDesign,
+    altText: 'Custom Website Design',
+    title: 'Custom Website Design',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Get a website tailored to your business needs, designed to be responsive and user-friendly, ensuring a strong online presence.',
   },
   {
     id: 2,
-    imgSrc: Partnership,
-    altText: 'Partnership deal',
-    title: 'Partnership deal',
+    imgSrc: BusinessBots,
+    altText: 'Business Bot Integration',
+    title: 'Business Bot Integration',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Automate your business processes with intelligent bots designed to streamline operations and enhance customer interactions.',
   },
   {
     id: 3,
-    imgSrc: Subscription,
-    altText: 'Pro Subscription',
-    title: 'Pro Subscription',
+    imgSrc: Flyers,
+    altText: 'Professional Flyer Design',
+    title: 'Professional Flyer Design',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Create impactful flyers that effectively communicate your brand message and attract attention with high-quality designs.',
   },
   {
     id: 4,
     imgSrc: Support,
-    altText: 'Customer Support',
-    title: 'Customer Support',
+    altText: 'Dedicated Support',
+    title: 'Dedicated Support',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Receive continuous support and maintenance to ensure your website, bots, and flyers are always up-to-date and performing optimally.',
   },
 ];
-
-export default function KeyFeature() {
-  return (
-   <section sx={{variant: 'section.keyFeature'}}  id="feature">
-     <Container>
-       <SectionHeader
-       slogan="Whats the function"
-       title="Meet the feature of our product"
-       />
-       <Grid sx={styles.grid}>
-         {data.map((item) => (
-           <FeatureCardColumn
-           key={item.id}
-           src={item.imgSrc}
-           alt={item.altText}
-           title={item.title}
-           text={item.text}
-           
-           />
-
-         ))}
-
-       </Grid>
-     </Container>
-
-   </section>
-  );
-}
 
 const styles = {
   grid: {
