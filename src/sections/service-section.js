@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-/** @jsx jsx */
+/*mport React, { useState } from 'react';
+@jsx jsx 
 import { jsx, Container, Box, Grid, Text, Heading, Button, Image } from 'theme-ui';
 import { keyframes } from '@emotion/core';
 import TextFeature from 'components/text-feature';
@@ -79,6 +79,116 @@ export default function ServiceSection() {
                 <Box sx={styles.wrapper}>
                   <Heading sx={styles.wrapper.title}>{feature.title}</Heading>
                   <Text sx={styles.wrapper.subTitle}>{feature.text}</Text>
+                </Box>
+              </Box>
+            ))}
+          </Grid>
+        </Box>
+      </Container>
+      <ModalVideo
+        channel="youtube"
+        isOpen={videoOpen}
+        videoId="iGBERMGMIvcfQBmcs"
+        onClose={() => setVideoOpen(false)}
+      />
+    </section>
+  );
+}
+
+const playPluse = keyframes`
+  from {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    opacity: 0;
+  }
+`;*/
+
+import React, { useState } from 'react';
+/** @jsx jsx */
+import { jsx, Container, Box, Grid, Text, Heading, Button, Image } from 'theme-ui';
+import { keyframes } from '@emotion/core';
+import TextFeature from 'components/text-feature';
+import ModalVideo from 'react-modal-video';
+import { IoIosPlay, IoMdHeartEmpty } from 'react-icons/io';
+
+import ServiceThumb from 'assets/service-thumb.png';
+import shapePattern from 'assets/shape-pattern1.png';
+
+import Smart from 'assets/services/smart.svg';
+import Secure from 'assets/services/secure.svg';
+import MobileDrawer from 'components/header/mobile-drawer';
+
+const data = {
+  subTitle: 'Our Services',
+  title: 'Innovative Solutions for Your Business',
+  features: [
+    {
+      id: 1,
+      imgSrc: Smart,
+      altText: 'Website Creation',
+      title: 'Website Creation',
+      text:
+        'We build custom websites that are not only visually appealing but also optimized for performance and user experience. Your online presence will be top-notch and effective.',
+    },
+    {
+      id: 2,
+      imgSrc: Secure,
+      altText: 'Business Bots',
+      title: 'Business Bots',
+      text:
+        'Our advanced business bots automate routine tasks, improve efficiency, and enhance customer interactions, helping your business run smoothly and effectively.',
+    },
+    {
+      id: 3,
+      imgSrc: MobileDrawer,
+      altText: 'Flyer Design',
+      title: 'Flyer Design',
+      text:
+        'Create eye-catching flyers that capture attention and effectively communicate your message. Perfect for promotions, events, and brand awareness.',
+    },
+  ],
+};
+
+export default function ServiceSection() {
+  const [videoOpen, setVideoOpen] = useState(false);
+  const handleClick = (e) => {
+    e.preventDefault();
+    setVideoOpen(true);
+  };
+
+  return (
+    <section sx={{ variant: 'section.services' }}>
+      <Container>
+        <Box>
+          <Image src={ServiceThumb} alt="Service Thumbnail" />
+          <Button
+            onClick={handleClick}
+            aria-label="Play Video"
+          >
+            <span>
+              <IoIosPlay />
+            </span>
+          </Button>
+          <Box>
+            <Image src={shapePattern} alt="Decorative Shape" />
+          </Box>
+        </Box>
+        <Box>
+          <TextFeature subTitle={data.subTitle} title={data.title} />
+          <Grid>
+            {data.features.map((feature) => (
+              <Box key={feature.id}>
+                <Image src={feature.imgSrc} alt={feature.altText} />
+                <Box>
+                  <Heading>
+                    {feature.title}
+                  </Heading>
+                  <Text>
+                    {feature.text}
+                  </Text>
                 </Box>
               </Box>
             ))}
