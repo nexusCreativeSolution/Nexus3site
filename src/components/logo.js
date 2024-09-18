@@ -16,7 +16,7 @@ export default function Logo({ src, ...rest }) {
     }
     {...rest}
     >
-      <Image src={src} alt="nextjs landing page logo" />
+      <Image src={src} alt="nexus creative solution" />
     
     </Link>
   );
