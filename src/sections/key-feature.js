@@ -1,13 +1,5 @@
 
-/*mport { jsx } from 'theme-ui';
-import { Container, Grid } from 'theme-ui';
-import SectionHeader from '../components/section-header';
-import FeatureCardColumn from 'components/feature-card-column.js';
-import WebsiteDesign from 'assets/key-feature/website-design.svg';
-import BusinessBots from 'assets/key-feature/business-bots.svg';
-import Flyers from 'assets/key-feature/flyers.svg';
-import Support from 'assets/key-feature/support.svg';
-*/
+
 
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
