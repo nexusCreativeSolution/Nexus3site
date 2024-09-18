@@ -6,14 +6,13 @@ import { jsx, Container, Box, Grid, Text, Heading, Button, Image } from 'theme-u
 import { keyframes } from '@emotion/core';
 import TextFeature from 'components/text-feature';
 import ModalVideo from 'react-modal-video';
-import { IoIosPlay, IoMdHeartEmpty } from 'react-icons/io';
+import { IoIosPlay } from 'react-icons/io';
 
 import ServiceThumb from 'assets/service-thumb.png';
 import shapePattern from 'assets/shape-pattern1.png';
 
 import Smart from 'assets/services/smart.svg';
 import Secure from 'assets/services/secure.svg';
-import MobileDrawer from 'components/header/mobile-drawer';
 
 const data = {
   subTitle: 'Our Services',
@@ -24,24 +23,21 @@ const data = {
       imgSrc: Smart,
       altText: 'Website Creation',
       title: 'Website Creation',
-      text:
-        'We build custom websites that are not only visually appealing but also optimized for performance and user experience. Your online presence will be top-notch and effective.',
+      text: 'We build custom websites that are not only visually appealing but also optimized for performance and user experience. Your online presence will be top-notch and effective.',
     },
     {
       id: 2,
       imgSrc: Secure,
       altText: 'Business Bots',
       title: 'Business Bots',
-      text:
-        'Our advanced business bots automate routine tasks, improve efficiency, and enhance customer interactions, helping your business run smoothly and effectively.',
+      text: 'Our advanced business bots automate routine tasks, improve efficiency, and enhance customer interactions, helping your business run smoothly and effectively.',
     },
     {
       id: 3,
       imgSrc: Secure,
       altText: 'Flyer Design',
       title: 'Flyer Design',
-      text:
-        'Create eye-catching flyers that capture attention and effectively communicate your message. Perfect for promotions, events, and brand awareness.',
+      text: 'Create eye-catching flyers that capture attention and effectively communicate your message. Perfect for promotions, events, and brand awareness.',
     },
   ],
 };
@@ -61,10 +57,20 @@ export default function ServiceSection() {
           <Button
             onClick={handleClick}
             aria-label="Play Video"
+            sx={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              backgroundColor: 'transparent',
+              border: 'none',
+              cursor: 'pointer',
+              '&:focus': {
+                outline: 'none',
+              },
+            }}
           >
-            <span>
-              <IoIosPlay />
-            </span>
+            <IoIosPlay size={40} color="#fff" />
           </Button>
           <Box>
             <Image src={shapePattern} alt="Decorative Shape" />
@@ -77,12 +83,8 @@ export default function ServiceSection() {
               <Box key={feature.id}>
                 <Image src={feature.imgSrc} alt={feature.altText} />
                 <Box>
-                  <Heading>
-                    {feature.title}
-                  </Heading>
-                  <Text>
-                    {feature.text}
-                  </Text>
+                  <Heading>{feature.title}</Heading>
+                  <Text>{feature.text}</Text>
                 </Box>
               </Box>
             ))}
