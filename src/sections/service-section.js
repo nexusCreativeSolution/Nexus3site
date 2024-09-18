@@ -4,91 +4,92 @@ import { jsx, Container, Box, Grid, Text, Heading, Button, Image } from 'theme-u
 import { keyframes } from '@emotion/core';
 import TextFeature from 'components/text-feature';
 import ModalVideo from 'react-modal-video';
-import { IoIosPlay, IoMdHeartEmpty } from 'react-icons/io';
+import { IoIosPlay } from 'react-icons/io';
 
 import ServiceThumb from 'assets/service-thumb.png';
 import shapePattern from 'assets/shape-pattern1.png';
 
-import Smart from 'assets/services/smart.svg';
-import Secure from 'assets/services/secure.svg';
+import WebCreation from 'assets/services/web-creation.svg';
+import BusinessBots from 'assets/services/business-bots.svg';
+import Flyers from 'assets/services/flyers.svg';
 import MobileDrawer from 'components/header/mobile-drawer';
 
 const data = {
-  subTitle: 'our services',
-  title: 'Business Goals Achieved with Design',
+  subTitle: 'Our Services',
+  title: 'Transform Your Business with Creative Solutions',
   features: [
     {
       id: 1,
-      imgSrc: Smart,
-      altText: 'Smart Features',
-      title: 'Smart Features',
+      imgSrc: WebCreation,
+      altText: 'Website Creation',
+      title: 'Website Creation',
       text:
-        'Get your blood tests delivered at let home collect sample from the victory of the managements. your blood tests.',
+        'We design and develop modern, responsive websites that meet the unique needs of your business, ensuring a seamless user experience.',
     },
     {
       id: 2,
-      imgSrc: Secure,
-      altText: 'Secure Contents',
-      title: 'Secure Contents',
+      imgSrc: BusinessBots,
+      altText: 'Business Bots',
+      title: 'Business Bots',
       text:
-        'Get your blood tests delivered at let home collect sample from the victory of the managements. your blood tests.',
+        'Automate your business processes with custom bots designed to streamline operations and enhance customer engagement.',
+    },
+    {
+      id: 3,
+      imgSrc: Flyers,
+      altText: 'Flyer Design',
+      title: 'Flyer Design',
+      text:
+        'Stand out with professionally designed flyers that capture attention and communicate your message effectively.',
     },
   ],
 };
 
 export default function ServiceSection() {
-  const[videoOpen , setVideoOpen] = useState(false);
+  const [videoOpen, setVideoOpen] = useState(false);
   const handleClick = (e) => {
     e.preventDefault();
-
     setVideoOpen(true);
-  }
+  };
+
   return (
-    <section sx={{variant : 'section.services'}}>
+    <section sx={{ variant: 'section.services' }}>
       <Container sx={styles.containerBox}>
         <Box sx={styles.thumbnail}>
-          <Image src={ServiceThumb} alt={"Thumbnail"}/>
+          <Image src={ServiceThumb} alt="Service Thumbnail" />
           <Button
-          sx={styles.videoBtn}
-          onClick={handleClick}
-          aria-lable="Pay Button"
+            sx={styles.videoBtn}
+            onClick={handleClick}
+            aria-label="Play Video"
           >
             <span>
               <IoIosPlay />
             </span>
-            
-
           </Button>
-          <Box sx={styles.shapeBox}>  
-          <Image src={shapePattern} alt="shape" />
-
+          <Box sx={styles.shapeBox}>
+            <Image src={shapePattern} alt="Decorative Shape" />
           </Box>
         </Box>
         <Box sx={styles.contentBox}>
-          <TextFeature subTitle={data.subTitle} title={data.title}/>
-          <Grid sx={styles.Grid}>
+          <TextFeature subTitle={data.subTitle} title={data.title} />
+          <Grid sx={styles.grid}>
             {data.features.map((feature) => (
               <Box sx={styles.card} key={feature.id}>
-               <Image src={feature.imgSrc} alt={feature.altText} sx={styles.icon} />
-               <Box sx={styles.wrapper} >
-                 <Heading sx={styles.wrapper.title} >
-                   {feature.title}
-                   <Text sx={styles.wrapper.subTitle}>
-                     {feature.text}
-                   </Text>
-                 </Heading>
-               </Box>
+                <Image src={feature.imgSrc} alt={feature.altText} sx={styles.icon} />
+                <Box sx={styles.wrapper}>
+                  <Heading sx={styles.wrapper.title}>{feature.title}</Heading>
+                  <Text sx={styles.wrapper.subTitle}>{feature.text}</Text>
+                </Box>
               </Box>
             ))}
           </Grid>
         </Box>
-
       </Container>
-      <ModalVideo 
-      channel="youtube"
-      isOpen={videoOpen}
-      videoId="iGBERMGMIvcfQBmcs"
-      onClose={() => setVideoOpen(false)}
+      <ModalVideo
+        channel="youtube"
+        isOpen={videoOpen}
+        videoId="iGBERMGMIvcfQBmcs"
+        onClose={() => setVideoOpen(false)}
       />
     </section>
   );
@@ -99,9 +100,8 @@ const playPluse = keyframes`
     transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
     opacity: 1;
   }
-
   to {
-	transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
     opacity: 0;
   }
 `;
