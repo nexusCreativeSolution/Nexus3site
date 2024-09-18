@@ -10,27 +10,27 @@ import ArrowEven from 'assets/arrowEven.svg';
 const data = [
   {
     id: 1,
-    title: 'Set disbursement Instructions',
+    title: 'Custom Website Design',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Receive a tailored website that meets your business needs. Our design process ensures a modern, responsive, and user-friendly experience.',
   },
   {
     id: 2,
-    title: 'Assembly retrieves funds from your account',
+    title: 'Business Bot Integration',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Implement intelligent business bots to automate tasks and enhance customer engagement. Streamline operations and improve efficiency with our custom solutions.',
   },
   {
     id: 3,
-    title: 'Assembly initiates disbursement',
+    title: 'Flyer Design Services',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Obtain professionally designed flyers that effectively communicate your message. Our designs are crafted to capture attention and promote your brand.',
   },
   {
     id: 4,
-    title: 'Customer receives funds payment',
+    title: 'Ongoing Support and Maintenance',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Benefit from our dedicated support to ensure your website, bots, and flyers continue to meet your needs. We provide reliable maintenance and updates to keep your services running smoothly.',
   },
 ];
 
