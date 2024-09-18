@@ -6,11 +6,11 @@ import FeatureThumb from 'assets/core-feature.png';
 import shapePattern from 'assets/shape-pattern2.png';
 
 const data = {
-  subTitle: 'Core features',
-  title: 'Smart Jackpots that you may love this anytime & anywhere',
+  subTitle: 'Our Key Features',
+  title: 'Innovative Solutions for Your Business Needs',
   description:
-    'Get your tests delivered at let home collect sample from the victory of the managements that supplies best design system guidelines ever.',
-  btnName: 'Get Started',
+    'Experience top-notch services designed to elevate your business. From customized websites to intelligent business bots and eye-catching flyers, we provide solutions that drive success and streamline your operations.',
+  btnName: 'Learn More',
   btnURL: '#',
 };
 
