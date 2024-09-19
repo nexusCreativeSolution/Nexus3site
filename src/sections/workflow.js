@@ -10,27 +10,27 @@ import ArrowEven from 'assets/arrowEven.svg';
 const data = [
   {
     id: 1,
-    title: 'Custom Website Design',
+    title: 'Initial Consultation',
     text:
-      'Receive a tailored website that meets your business needs. Our design process ensures a modern, responsive, and user-friendly experience.',
+      'We start with a detailed consultation to understand your requirements and goals.',
   },
   {
     id: 2,
-    title: 'Business Bot Integration',
+    title: 'Design and Development',
     text:
-      'Implement intelligent business bots to automate tasks and enhance customer engagement. Streamline operations and improve efficiency with our custom solutions.',
+      'Our team designs and develops your project according to your specifications, ensuring high quality and functionality.',
   },
   {
     id: 3,
-    title: 'Flyer Design Services',
+    title: 'Testing and Launch',
     text:
-      'Obtain professionally designed flyers that effectively communicate your message. Our designs are crafted to capture attention and promote your brand.',
+      'We rigorously test the project before launch to ensure everything works flawlessly and meets your expectations.',
   },
   {
     id: 4,
-    title: 'Ongoing Support and Maintenance',
+    title: 'Ongoing Support',
     text:
-      'Benefit from our dedicated support to ensure your website, bots, and flyers continue to meet your needs. We provide reliable maintenance and updates to keep your services running smoothly.',
+      'After launch, we provide ongoing support and maintenance to keep everything running smoothly and up to date.',
   },
 ];
 
@@ -39,8 +39,8 @@ export default function WorkFlow() {
     <section sx={styles.workflow}>
       <Container>
         <SectionHeader
-         slogan="What the function"
-         title="Meet the function of our"
+         Slogan: “Our Proven Approach”
+          Title: “How We Work”
          isWhite={true}
          />
          <Grid sx={styles.grid}>
