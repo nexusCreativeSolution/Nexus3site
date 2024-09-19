@@ -2,7 +2,16 @@
 
 import React, { useState } from 'react';
 /** @jsx jsx */
-import { jsx, Container, Box, Grid, Text, Heading, Button, Image } from 'theme-ui';
+import {
+  jsx,
+  Container,
+  Box,
+  Grid,
+  Text,
+  Heading,
+  Button,
+  Image,
+} from 'theme-ui';
 import { keyframes } from '@emotion/core';
 import TextFeature from 'components/text-feature';
 import ModalVideo from 'react-modal-video';
@@ -15,35 +24,31 @@ import Smart from 'assets/services/smart.svg';
 import Secure from 'assets/services/secure.svg';
 
 const data = {
-  subTitle: 'Our Services',
-  title: 'Innovative Solutions for Your Business',
+  subTitle: 'Why Trust Us',
+  title: 'Two Key Reasons to Trust Our Services',
   features: [
     {
       id: 1,
       imgSrc: Smart,
-      altText: 'Website Creation',
-      title: 'Website Creation',
-      text: 'We build custom websites that are not only visually appealing but also optimized for performance and user experience. Your online presence will be top-notch and effective.',
+      altText: 'Expert Solutions',
+      title: 'Expert Solutions',
+      text:
+        'We bring years of experience and specialized expertise to deliver smart, innovative solutions that align with your business goals.',
     },
     {
       id: 2,
       imgSrc: Secure,
-      altText: 'Business Bots',
-      title: 'Business Bots',
-      text: 'Our advanced business bots automate routine tasks, improve efficiency, and enhance customer interactions, helping your business run smoothly and effectively.',
-    },
-    {
-      id: 3,
-      imgSrc: Secure,
-      altText: 'Flyer Design',
-      title: 'Flyer Design',
-      text: 'Create eye-catching flyers that capture attention and effectively communicate your message. Perfect for promotions, events, and brand awareness.',
+      altText: 'Reliable Security',
+      title: 'Reliable Security',
+      text:
+        'Your data is protected with industry-standard security practices, ensuring that your business information stays safe and secure.',
     },
   ],
 };
 
 export default function ServiceSection() {
   const [videoOpen, setVideoOpen] = useState(false);
+
   const handleClick = (e) => {
     e.preventDefault();
     setVideoOpen(true);
@@ -51,40 +56,36 @@ export default function ServiceSection() {
 
   return (
     <section sx={{ variant: 'section.services' }}>
-      <Container>
-        <Box>
-          <Image src={ServiceThumb} alt="Service Thumbnail" />
+      <Container sx={styles.containerBox}>
+        <Box sx={styles.thumbnail}>
+          <Image src={ServiceThumb} alt="thumbnail" />
           <Button
+            sx={styles.videoBtn}
             onClick={handleClick}
-            aria-label="Play Video"
-            sx={{
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-              backgroundColor: 'transparent',
-              border: 'none',
-              cursor: 'pointer',
-              '&:focus': {
-                outline: 'none',
-              },
-            }}
+            aria-label="Play Button"
           >
-            <IoIosPlay size={40} color="#fff" />
+            <span>
+              <IoIosPlay />
+            </span>
           </Button>
-          <Box>
-            <Image src={shapePattern} alt="Decorative Shape" />
+          <Box sx={styles.shapeBox}>
+            <Image src={shapePattern} alt="shape" />
           </Box>
         </Box>
-        <Box>
+        <Box sx={styles.contentBox}>
           <TextFeature subTitle={data.subTitle} title={data.title} />
-          <Grid>
+          <Grid sx={styles.grid}>
             {data.features.map((feature) => (
-              <Box key={feature.id}>
-                <Image src={feature.imgSrc} alt={feature.altText} />
-                <Box>
-                  <Heading>{feature.title}</Heading>
-                  <Text>{feature.text}</Text>
+              <Box sx={styles.card} key={feature.id}>
+                <Image
+                  src={feature.imgSrc}
+                  alt={feature.altText}
+                  sx={styles.icon}
+                />
+
+                <Box sx={styles.wrapper}>
+                  <Heading sx={styles.wrapper.title}>{feature.title}</Heading>
+                  <Text sx={styles.wrapper.subTitle}>{feature.text}</Text>
                 </Box>
               </Box>
             ))}
@@ -94,7 +95,7 @@ export default function ServiceSection() {
       <ModalVideo
         channel="youtube"
         isOpen={videoOpen}
-        videoId="iGBERMGMIvcfQBmcs"
+        videoId="5qap5aO4i9A"
         onClose={() => setVideoOpen(false)}
       />
     </section>
@@ -106,12 +107,12 @@ const playPluse = keyframes`
     transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
     opacity: 1;
   }
+
   to {
-    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+	transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
     opacity: 0;
   }
 `;
-
 const styles = {
   coreFeature: {
     py: [0, null, null, 2, null, 7],
