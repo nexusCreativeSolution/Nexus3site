@@ -84,7 +84,6 @@ const packages = {
       description: 'For advanced needs with full features',
       priceWithUnit: '$150usd',
       buttonText: 'Get Started',
-      anotherOption: 'Or Start 7-Day Trial',
       points: [
         {
           id: 1,
@@ -153,7 +152,6 @@ const packages = {
       description: 'For growing businesses needing more features',
       priceWithUnit: '$350usd/year',
       buttonText: 'Get Started',
-      anotherOption: 'Or Start 7-Day Trial',
       points: [
         {
           id: 1,
@@ -189,7 +187,6 @@ const packages = {
       description: 'For advanced needs with full features',
       priceWithUnit: '$500usd/year',
       buttonText: 'Get Started',
-      anotherOption: 'Or Start 7-Day Trial',
       points: [
         {
           id: 1,
