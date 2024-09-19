@@ -1,30 +1,33 @@
+
 import React, { useState } from 'react';
 import { Box } from 'theme-ui';
 import { Scrollbars } from 'react-custom-scrollbars';
 import Drawer from 'components/drawer';
 import { IoMdClose, IoMdMenu } from 'react-icons/io';
 import { Link } from 'react-scroll';
-import { FaFacebookF, FaTwitter, FaGithubAlt, FaDribbble } from 'react-icons/fa';
+import { FaFacebookF, FaTelegramPlane, FaDiscord, FaWhatsapp } from 'react-icons/fa'; // Updated icons import
 import menuItems from './header.data';
 
 const social = [
   {
-    path: '/',
+    path: 'https://www.facebook.com/share/CsFNSmYAWkPY5eGV/?mibextid=LQQJ4d',
     icon: <FaFacebookF />,
   },
   {
-    path: '/',
-    icon: <FaTwitter />,
+    path: 'https://t.me/TalkWizardBot', // Telegram link
+    icon: <FaTelegramPlane />,
   },
   {
-    path: '/',
-    icon: <FaGithubAlt />,
+    path: 'https://discord.gg/GR3ajMYk', // Discord link
+    icon: <FaDiscord />,
   },
   {
-    path: '/',
-    icon: <FaDribbble />,
+    path: 'https://wa.me/8763351213', // WhatsApp link
+    icon: <FaWhatsapp />,
   },
 ];
+
+
 
 export default function MobileDrawer() {
   const [isDrawerOpen, setIsDrawerOpen] =useState(false);
