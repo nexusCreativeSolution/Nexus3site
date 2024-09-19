@@ -15,7 +15,7 @@ const packages = {
       name: 'Basic Website',
       description: 'Ideal for individuals or small businesses',
       buttonText: 'Get Started',
-      priceWithUnit: '$299',
+      priceWithUnit: '$97usd',
       points: [
         {
           id: 1,
@@ -47,9 +47,8 @@ const packages = {
       id: 2,
       name: 'Professional Website',
       description: 'For growing businesses needing more features',
-      priceWithUnit: '$599',
+      priceWithUnit: '$130usd',
       buttonText: 'Get Started',
-      anotherOption: 'Or Start 7-Day Trial',
       points: [
         {
           id: 1,
@@ -83,7 +82,7 @@ const packages = {
       headerIcon: <IoIosCheckmarkCircle />,
       name: 'Premium Website',
       description: 'For advanced needs with full features',
-      priceWithUnit: '$999',
+      priceWithUnit: '$150usd',
       buttonText: 'Get Started',
       anotherOption: 'Or Start 7-Day Trial',
       points: [
@@ -152,7 +151,7 @@ const packages = {
       id: 2,
       name: 'Professional Website',
       description: 'For growing businesses needing more features',
-      priceWithUnit: '$599/year',
+      priceWithUnit: '$350usd/year',
       buttonText: 'Get Started',
       anotherOption: 'Or Start 7-Day Trial',
       points: [
@@ -188,7 +187,7 @@ const packages = {
       headerIcon: <IoIosCheckmarkCircle />,
       name: 'Premium Website',
       description: 'For advanced needs with full features',
-      priceWithUnit: '$999/year',
+      priceWithUnit: '$500usd/year',
       buttonText: 'Get Started',
       anotherOption: 'Or Start 7-Day Trial',
       points: [
