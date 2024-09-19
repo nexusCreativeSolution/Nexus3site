@@ -16,7 +16,13 @@ export default function Banner() {
           <Text as="p" variant="heroSecondary">
             Elevate your business with our cutting-edge websites, powerful automation bots, and custom-designed flyers. We provide the tools you need to grow your brand and streamline your operations.
           </Text>
-          <Button variant="primary">Explore Our Services</Button>
+         <Button
+  variant="primary"
+  as="a"
+  href="#pricing"
+>
+  Explore Our Services
+</Button>
         </Box>
         <Box sx={styles.banner.imageBox}>
           <Image src={BannerImg} alt="banner" />
