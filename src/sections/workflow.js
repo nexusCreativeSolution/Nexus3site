@@ -39,8 +39,8 @@ export default function WorkFlow() {
     <section sx={styles.workflow}>
       <Container>
         <SectionHeader
-         Slogan: “Our Proven Approach”
-          Title: “How We Work”
+         slogan="Our Proven Approach"
+          title= "How We Work"
          isWhite={true}
          />
          <Grid sx={styles.grid}>
